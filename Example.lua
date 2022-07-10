@@ -6,7 +6,7 @@ local espSettings = {
     DepthMode = Enum.HighlightDepthMode.AlwaysOnTop,
 }
 
-local highlightLib = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-highlight-esp-library-2952"))()
+local highlightLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Saturn12132/HighlightESP-lib/main/Source.lua"))()
 highlightLib:loadSettings(espSettings)
 
 local Players = game:GetService("Players")
