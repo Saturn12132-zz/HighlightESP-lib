@@ -15,7 +15,7 @@ if hookfunction then
 else--making it compatible with shitty level 2 exploits and localscripts (you'd have to make this a modulescript or have access to loadstring & httpget)
 	folderLocation = workspace
 end
-local alreadyLoaded = folderLocation:FindFirstChild("Rendered Highlights")
+local alreadyLoaded = folderLocation:FindFirstChild("HighlightName")
 if alreadyLoaded then
     alreadyLoaded:Destroy()--just wiping the old folder in case it gets re-executed
 end
