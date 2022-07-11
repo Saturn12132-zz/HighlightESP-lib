@@ -1,7 +1,7 @@
 getgenv().Enabled = true
 if getgenv().Enabled == false then
-game.CoreGui:FindFirstChild("HighlightName"):Destroy()
 getgenv().Disable:Disconnect()
+game.CoreGui:FindFirstChild("HighlightName"):Destroy()
 end
 if getgenv().Enabled == true then
 local espSettings = {
@@ -24,9 +24,9 @@ for i,v in ipairs(Part:GetChildren()) do
     if v:IsA("Part") then
         addPartToEsp(v)
     end
-    v.ChildAdded:Connect(addPartToEsp)
+    getgenv().Disable = v.ChildAdded:Connect(addPartToEsp)
 end
-Part.ChildAdded:Connect(function(Parts)
-    v.ChildAdded:Connect(addPartToEsp)
+getgenv().Disable = Part.ChildAdded:Connect(function(Parts)
+    getgenv().Disable = v.ChildAdded:Connect(addPartToEsp)
 end)
 end
