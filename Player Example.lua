@@ -1,7 +1,7 @@
 getgenv().Enabled = true
 if getgenv().Enabled == false then
-getgenv().Disable:Disconnect()
 game.CoreGui:FindFirstChild("HighlightName"):Destroy()
+getgenv().Disable:Disconnect()
 end
 if getgenv().Enabled == true then
 local espSettings = {
