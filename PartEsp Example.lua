@@ -1,3 +1,9 @@
+getgenv().Enabled = true
+if getgenv().Enabled == false then
+game.CoreGui:FindFirstChild("HighlightName"):Destroy()
+getgenv().Disable:Disconnect()
+end
+if getgenv().Enabled == true then
 local espSettings = {
     FillColor = Color3.fromRGB(200, 90, 255),
     OutlineColor = Color3.fromRGB(255, 119, 215),
@@ -23,3 +29,4 @@ end
 Part.ChildAdded:Connect(function(Parts)
     v.ChildAdded:Connect(addPartToEsp)
 end)
+end
