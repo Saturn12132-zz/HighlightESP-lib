@@ -15,7 +15,7 @@ local espSettings = {
 local highlightLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Saturn12132/HighlightESP-lib/main/Source.lua"))()
 highlightLib:loadSettings(espSettings)
 
-local Part = game.Workspace.BackroomsMap
+local Part = game.Workspace
 local function addPartToEsp(PartModel)
     highlightLib:addEsp(PartModel)
 end
@@ -27,6 +27,6 @@ for i,v in ipairs(Part:GetChildren()) do
     getgenv().Disable = v.ChildAdded:Connect(addPartToEsp)
 end
 getgenv().Disable = Part.ChildAdded:Connect(function(Parts)
-    getgenv().Disable = v.ChildAdded:Connect(addPartToEsp)
+    getgenv().Disable = Parts.ChildAdded:Connect(addPartToEsp)
 end)
 end
