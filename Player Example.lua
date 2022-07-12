@@ -27,6 +27,6 @@ for i,v in ipairs(Players:GetPlayers()) do
     getgenv().Disable = v.CharacterAdded:Connect(addCharToEsp)
 end
 getgenv().Disable = Players.PlayerAdded:Connect(function(Player)
-    getgenv().Disable = v.CharacterAdded:Connect(addCharToEsp)
+    getgenv().Disable = Player.CharacterAdded:Connect(addCharToEsp)
 end)
 end
