@@ -26,7 +26,4 @@ for i,v in ipairs(Part:GetChildren()) do
     end
     getgenv().Disable = v.ChildAdded:Connect(addPartToEsp)
 end
-getgenv().Disable = Part.ChildAdded:Connect(function(Parts)
-    getgenv().Disable = Parts.ChildAdded:Connect(addPartToEsp)
-end)
 end
